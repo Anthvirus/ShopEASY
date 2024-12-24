@@ -8,7 +8,7 @@ const CartSidebar = ({ cart, removeItem, onBuy, toggleCartSidebar }) => {
       <div className="flex items-center justify-between text-slate-700">
         <h2 className='text-xl font-semibold tracking-wider'>Your Cart</h2>
         {/* Close Cart Button */}
-        <button className="top-0 text-red-600 rotate-45" onClick={toggleCartSidebar}>
+        <button className="top-0 text-red-600" onClick={toggleCartSidebar}>
           ✖
         </button>
       </div>

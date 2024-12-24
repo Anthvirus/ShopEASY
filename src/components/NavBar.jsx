@@ -10,7 +10,7 @@ import { products } from '../Data/data';
   const navigate = useNavigate();
 
   // Detect screen size for responsive design
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 1023px)' });
 
   const handleSearch = (e) => {
     const term = e.target.value;
@@ -58,7 +58,7 @@ import { products } from '../Data/data';
         
         {/* Search Bar */}
         <form
-          className="absolute flex-col hidden w-2/3 p-1 mx-32 mt-1 md:flex md:w-2/4 md:mx-72 h-max"
+          className="absolute flex-col hidden w-2/3 p-1 mx-32 mt-1 lg:flex md:w-2/4 md:mx-72 h-max"
           onSubmit={handleSearchSubmit}
         >
           <input
@@ -99,19 +99,7 @@ import { products } from '../Data/data';
             </li>
             <li>
               <Link to="/account" className="hover:text-green-800">Account</Link>
-            </li>
-            
-            {/* Add your Cart function here */}
-            
-             <li>
-              <button
-                onClick={toggleCartSidebar}
-                className="hover:text-green-800"
-              >
-                Cart
-              </button>
-            </li>
-            
+            </li>            
           </ul>
         )}
 
@@ -120,7 +108,7 @@ import { products } from '../Data/data';
         {isMobile && (
           <button
             onClick={toggleNavbar}
-            className="text-green-800 md:hidden focus:outline-none"
+            className="flex text-green-800 lg:hidden focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +130,7 @@ import { products } from '../Data/data';
 
       {/* Mobile Navigation */}
       {isHidden ? (
-        <div className="absolute w-full py-1 bg-gray-100 h-max md:hidden">
+        <div className="absolute w-full py-1 bg-gray-100 h-max lg:hidden">
           <ul className="flex flex-col h-full text-xl font-bold text-gray-600 uppercase justify-evenly">
             <li className='flex items-center w-full h-12 px-2 cursor-pointer hover:bg-white'>
               <Link to="/" className="block hover:text-green-800">Category</Link>
@@ -152,9 +140,6 @@ import { products } from '../Data/data';
             </li>
             <li className='flex items-center w-full h-12 px-2 cursor-pointer hover:bg-white'>
               <Link to="/account" className="block hover:text-green-800">Account</Link>
-            </li>
-            <li onClick={toggleCartSidebar} className='flex items-center w-full h-12 px-2 cursor-pointer hover:bg-white'>
-              <Link className='block hover:text:green-800'>Cart</Link>
             </li>
           </ul>
                   {/* Search Bar */}
@@ -190,6 +175,9 @@ import { products } from '../Data/data';
         </form>
         </div>
       ) : (<></>)}
+      <div className="fixed w-16 p-1 bg-green-800 rounded-full xl:w-20 right-3 top-80 z-100" onClick={toggleCartSidebar}>
+          <img src="/cart.jpg" alt="books" className="relative rounded-full size-full"/>
+        </div>
     </nav>
   );
 };

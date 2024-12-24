@@ -374,7 +374,7 @@
   border-radius: 4px;
   max-height: 200px;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .search-result-item {
@@ -894,7 +894,7 @@
     border-radius: 4px;
     max-height: 200px;
     overflow-y: auto;
-    z-index: 1000;
+    z-index: 100;
   }
   
   .search-result-item {

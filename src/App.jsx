@@ -7,7 +7,7 @@ import Home from './components/Home';
 import NavBar from './components/NavBar';
 import ProductCard from './components/ProductCard';
 import ProductDetails from './components/ProductDetails';
-
+  
 function App() {
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("cart");
@@ -60,6 +60,7 @@ function App() {
           removeItem={removeItem}
           onBuy={handleBuy}
           toggleCartSidebar={toggleCartSidebar}
+
         />
       )}
 
