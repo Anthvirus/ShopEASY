@@ -90,7 +90,7 @@ import { products } from '../Data/data';
 
         {/* Desktop Navigation */}
         {!isMobile && (
-          <ul className="relative hidden w-1/4 space-x-12 text-xl font-bold text-gray-700 md:flex justify-evenly">
+          <ul className="relative hidden max-w-1/4 space-x-12 text-xl font-bold text-gray-700 md:flex justify-evenly">
             <li>
               <Link to="/" className="hover:text-green-800">Category</Link>
             </li>
