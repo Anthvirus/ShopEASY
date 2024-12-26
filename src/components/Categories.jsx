@@ -2,7 +2,7 @@ const Categories = () => {
   return (
     <>
       <div className="flex flex-col flex-wrap mx-auto my-4 w-7/8 justify-evenly">
-        <div className="h-12 m-8 text-4xl font-bold text-green-800 xl:ml-24 xl:text-6xl">Shop Our Categories</div>
+        <div className="m-8 text-4xl font-bold text-green-800 min-h-12 xl:ml-24 xl:text-6xl">Shop Our Categories</div>
         <div className="flex flex-wrap w-full justify-evenly">
         <div className="CatCard -z-10">
           <div className="CatImageContainer">

@@ -4,7 +4,7 @@ import ProductGrid from './ProductGrid'
 
 const Home = () => {
   return (
-    <div className='width-screen'>
+    <div className='max-w-screen'>
       <Hero/>
       <Categories/>
       <ProductGrid />
